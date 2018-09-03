@@ -16,5 +16,9 @@ namespace aplicacao
         public string Language { get; set; }
         public string Html_url { get; set; }
         public string Contribuidor { get; set; }
+		
+		public Repositorio(){
+			Proprietario = new Proprietario()
+		}
     }
 }
