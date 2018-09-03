@@ -1,0 +1,189 @@
+﻿.body-content {
+    margin-top: 20px;
+}
+
+body{
+     background:#F3F3F3;
+     margin: 0px;
+     padding: 0px;
+}
+
+#topo{
+    background-color:#111f36;
+}
+
+#painelSistemas{
+    text-align:center;
+    color:#fff;
+    width: 56%;
+    padding-top: 5px;
+}
+.img-responsive{
+    height:63px;
+}
+
+#alerta{
+       margin-left: 69%;
+}
+
+#botaoSair{
+    color: white;
+    padding: 0px 40px 5px 40px;
+    float: right;
+    font-size: 16px;
+}
+
+#icone{
+    color:#c9302c;
+}
+
+#usuario{
+    text-align:center;
+    color:#fff;
+    margin-top:20px;
+    width: 32%;
+}
+
+#usuarioAno{
+    text-align:left;
+    margin-top:20px;
+    padding-left:20px;
+}
+
+#anoLetivo {
+    color: #fff;
+}
+
+.painel{
+     height: 300px;
+}
+
+footer{
+    text-align:center;
+}
+
+footer > p{
+   font-size:1.0em;
+}
+
+#menu{
+    margin-top: 50px;
+}
+
+.field-validation-error {
+     color: #a94442;
+}
+.bs-callout {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+.bs-callout h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.bs-callout p:last-child {
+    margin-bottom: 0;
+}
+.bs-callout code {
+    border-radius: 3px;
+}
+.bs-callout+.bs-callout {
+    margin-top: -5px;
+}
+.bs-callout-default {
+    border-left-color: #777;
+}
+.bs-callout-default h4 {
+    color: #777;
+}
+.bs-callout-primary {
+    border-left-color: #428bca;
+}
+.bs-callout-primary h4 {
+    color: #428bca;
+}
+.bs-callout-success {
+    border-left-color: #5cb85c;
+}
+.bs-callout-success h4 {
+    color: #5cb85c;
+}
+.bs-callout-danger {
+    border-left-color: #d9534f;
+}
+.bs-callout-danger h4 {
+    color: #d9534f;
+}
+.bs-callout-warning {
+    border-left-color: #f0ad4e;
+}
+.bs-callout-warning h4 {
+    color: #f0ad4e;
+}
+.bs-callout-info {
+    border-left-color: #5bc0de;
+}
+.bs-callout-info h4 {
+    color: #5bc0de;
+}
+
+.validation-summary-errors span {
+    font-weight: bold;
+    /*color: red;*/
+}
+
+.validation-summary-errors ul > li {
+    text-decoration: solid;
+}
+
+.tooltip-chart {
+  position: absolute;
+  z-index: 1;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  border-radius: 3px;
+  text-align: center;
+  pointer-events: none;
+  color: white;
+  transition: opacity .1s ease-out;
+}
+
+.ct-chart > svg {
+    margin-top: 40px;
+}
+
+.tooltip-chart.tooltip-chart-hidden {
+    opacity: 0;
+}
+
+@media(max-width: 768px){
+    footer > p{
+        font-size: 0.8em;
+    }
+
+    painel > p {
+        font-size: 0.7em;
+    }
+
+    a{
+        font-size: 0.9em;
+    }
+}
+
+label.required:after { 
+    content: " * "; 
+    color:red;
+}
+
+.fieldset-editar {
+  border: 1px solid #ccc;
+  padding: 10px;  
+}
+
+.loading{
+	color: #e3590c;
+}

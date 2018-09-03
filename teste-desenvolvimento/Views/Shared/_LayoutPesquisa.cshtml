@@ -1,0 +1,51 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var titulo = ViewBag.Pesquisa as string;
+    string controller = ViewBag.Controller ?? ViewContext.RouteData.Values["controller"].ToString();
+    string action = ViewBag.Action ?? ViewContext.RouteData.Values["action"].ToString();
+    string cancelar = ViewBag.Cancelar ?? "Index";
+    string formId = ViewBag.FormId ?? "form";
+    var sucesso = TempData["Sucesso"] as string ?? ViewBag.Sucesso as string;
+    var erro = TempData["Erro"] as string ?? ViewBag.Erro as string;
+}
+
+@section JsAdicional {
+    @RenderSection("JsAdicional", required: false)
+}
+
+<h2><strong>@titulo</strong></h2>
+<br />
+
+@using (Html.BeginForm(action, controller, FormMethod.Post, new { @id = formId }))
+{
+    if (!string.IsNullOrEmpty(sucesso))
+    {
+        <div class="alert alert-success">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <h4>Sucesso!</h4>
+            <p>@sucesso</p>
+        </div>
+    }
+
+    if (!string.IsNullOrWhiteSpace(erro))
+    {
+        <div class="alert alert-danger">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <h4>Erro!</h4>
+            <p>@erro</p>
+        </div>
+    }
+
+    if (ViewData.ModelState.Any(x => x.Value.Errors.Any()))
+    {
+        <div class="alert alert-danger">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <h4>Erro!</h4>
+            <p>
+                @Html.Raw(HttpUtility.HtmlDecode(Html.ValidationSummary(true, "Dados inválidos: ").ToHtmlString()))
+            </p>
+        </div>
+    }
+    @Html.AntiForgeryToken()
+    @RenderSection("Pesquisa", required: true)
+}

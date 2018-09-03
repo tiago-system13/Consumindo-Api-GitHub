@@ -1,0 +1,170 @@
+/* Space out content a bit */
+body {
+    padding-bottom: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+.nav>li.active>a {
+    text-decoration: none;
+    background-color: #eee;
+}
+
+/* Bootstrap 3 responsive centered columns */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+/* Margens */
+.margin-top4 { margin-top:4px; }
+.margin-top5 { margin-top:5px; }
+.margin-top6 { margin-top:6px; }
+.margin-top8 { margin-top:8px; }
+.margin-top10 { margin-top:10px; }
+.margin-top12 { margin-top:12px; }
+.margin-top14 { margin-top:14px; }
+.margin-top15 { margin-top:15px; }
+.margin-top16 { margin-top:16px; }
+.margin-top18 { margin-top:18px; }
+.margin-top20 { margin-top:20px; }
+.margin-top22 { margin-top:22px; }
+.margin-top24 { margin-top:24px; }
+.margin-top25 { margin-top:25px; }
+.margin-top26 { margin-top:26px; }
+.margin-top28 { margin-top:28px; }
+.margin-top30 { margin-top:30px; }
+
+.margin-bottom4 { margin-bottom:4px; }
+.margin-bottom5 { margin-bottom:5px; }
+.margin-bottom6 { margin-bottom:6px; }
+.margin-bottom8 { margin-bottom:8px; }
+.margin-bottom10 { margin-bottom:10px; }
+.margin-bottom12 { margin-bottom:12px; }
+.margin-bottom14 { margin-bottom:14px; }
+.margin-bottom15 { margin-bottom:15px; }
+.margin-bottom16 { margin-bottom:16px; }
+.margin-bottom18 { margin-bottom:18px; }
+.margin-bottom20 { margin-bottom:20px; }
+.margin-bottom22 { margin-bottom:22px; }
+.margin-bottom24 { margin-bottom:24px; }
+.margin-bottom25 { margin-bottom:25px; }
+.margin-bottom26 { margin-bottom:26px; }
+.margin-bottom28 { margin-bottom:28px; }
+.margin-bottom30 { margin-bottom:30px; }
+
+.margin-minus-top4 { margin-top:-4px; }
+.margin-minus-top5 { margin-top:-5px; }
+.margin-minus-top6 { margin-top:-6px; }
+.margin-minus-top8 { margin-top:-8px; }
+.margin-minus-top10 { margin-top:-10px; }
+.margin-minus-top12 { margin-top:-12px; }
+.margin-minus-top14 { margin-top:-14px; }
+.margin-minus-top15 { margin-top:-15px; }
+.margin-minus-top16 { margin-top:-16px; }
+.margin-minus-top18 { margin-top:-18px; }
+.margin-minus-top20 { margin-top:-20px; }
+.margin-minus-top22 { margin-top:-22px; }
+.margin-minus-top24 { margin-top:-24px; }
+.margin-minus-top25 { margin-top:-25px; }
+.margin-minus-top26 { margin-top:-26px; }
+.margin-minus-top28 { margin-top:-28px; }
+.margin-minus-top30 { margin-top:-30px; }
+
+.margin-minus-bottom4 { margin-bottom:-4px; }
+.margin-minus-bottom5 { margin-bottom:-5px; }
+.margin-minus-bottom6 { margin-bottom:-6px; }
+.margin-minus-bottom8 { margin-bottom:-8px; }
+.margin-minus-bottom10 { margin-bottom:-10px; }
+.margin-minus-bottom12 { margin-bottom:-12px; }
+.margin-minus-bottom14 { margin-bottom:-14px; }
+.margin-minus-bottom15 { margin-bottom:-15px; }
+.margin-minus-bottom16 { margin-bottom:-16px; }
+.margin-minus-bottom18 { margin-bottom:-18px; }
+.margin-minus-bottom20 { margin-bottom:-20px; }
+.margin-minus-bottom22 { margin-bottom:-22px; }
+.margin-minus-bottom24 { margin-bottom:-24px; }
+.margin-minus-bottom25 { margin-bottom:-25px; }
+.margin-minus-bottom26 { margin-bottom:-26px; }
+.margin-minus-bottom28 { margin-bottom:-28px; }
+.margin-minus-bottom30 { margin-bottom:-30px; }
+/* FIM Margens */

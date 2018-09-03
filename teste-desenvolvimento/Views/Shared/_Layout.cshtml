@@ -1,0 +1,92 @@
+﻿@using System.Web.Optimization;
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" lang="pt-BR" />
+    <meta name="accept-language" content="pt-BR" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+    @Styles.Render("~/css/estilos")
+    <base href="~/" />
+
+</head>
+<body>
+    <div id="wrapper">
+        <div class="navbar navbar-default navbar-cls-top " id="topo" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>                
+            </div>                  
+            <nav id="menu" class="navbar-default navbar-side" role="navigation">
+                <div class="sidebar-collapse">
+                    <ul id="main-menu" class="nav">
+                        <li>
+                            @Html.ActionLink("Meus Repositórios", "IndexMeuRepositorio", "MeuRepositorio")
+                        </li>
+                        <li>
+                            @Html.ActionLink("Repositórios", "IndexRepositorio", "Repositorio")
+                        </li>
+                        <li>
+                            @Html.ActionLink("Repositórios Favoritos", "IndexRepositorioFavorito", "Repositorio")
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div id="page-wrapper">
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+            <!-- /. PAGE INNER  -->
+            <div class="row">
+                <hr />
+                <footer>                    
+                </footer>
+            </div>
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <div class="modal fade" id="pleaseWaitDialog" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body" style="text-align: center">
+                    <img src="~/Content/images/loading.svg" /> Aguarde...
+                </div>
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/javascript")
+    <script type="text/javascript" language="javascript">
+        $.fn.modal.Constructor.prototype.enforceFocus = function () { };
+
+        var baseUrl = function (url) {
+            return $('base').attr('href') + url;
+        };
+
+        $.extend(true, $.fn.dataTable.defaults, {
+            responsive: true,
+            searching: false,
+            serverSide: true,
+            language: {
+                url: baseUrl("Scripts/DataTables.PT-BR.json")
+            }
+        });
+
+        $(function () {
+            $('#datetimepicker2').datetimepicker({
+                format: 'DD/MM/YYYY',
+                locale: 'pt-br'
+            });
+        });
+    </script>
+    @RenderSection("JsAdicional", required: false)
+</body>
+</html>

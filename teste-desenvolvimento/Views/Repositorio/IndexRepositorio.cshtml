@@ -1,0 +1,107 @@
+﻿@using System.Web.Optimization
+@{
+    Layout = "~/Views/Shared/_LayoutPesquisa.cshtml";
+    ViewBag.Pesquisa = "Repositórios";
+}
+
+@section JsAdicional {
+    @Scripts.Render("~/Views/Repositorio/Repositorios.js")
+}
+@section Pesquisa{
+
+    <div class="row" style="margin-top:3%">
+        <div class="col-xs-12 col-md-12 col-sm-12 table-responsive">
+
+            <table class="table table-striped table-bordered dt-responsive" cellspacing="0" width="100%" id="datatable-repositorio">
+                <thead>
+                    <tr>
+                        <th class="text-center">Código</th>
+                        <th class="text-center">Proprietário</th>
+                        <th class="text-center">Nome</th>
+                        <th class="text-center">Descrição</th>
+                        <th class="text-center">Linguagem</th>
+                        <th class="text-center">Atualização</th>
+                        <th class="text-center">URL</th>                       
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModalFavorito" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <!-- Header -->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h2 class="modal-title text-center" id="myModalLabel">Repositório Favorito</h2>
+                </div>
+
+                <div class="modal-body">
+                    <!-- Body -->
+                    <div class="row">
+                        <div id="msg"></div>
+                        <fieldset class="col-xs-12">
+                            <legend>Dados do Repositório</legend>
+                            @Html.Hidden("ID")
+                            <div class="col-xs-12 col-md-6 col-sm-12">
+                                @Html.Label("Proprietario")
+                                <br />
+                                <label style="color:blue" class="lbl-fieldset" id="lblProprietario"></label>
+                            </div>
+
+                            <div class="col-xs-12 col-md-6 col-sm-12">
+                                @Html.Label("Nome")
+                                <br />
+                                <label style="color:blue" class="lbl-fieldset" id="lblNome"></label>
+                            </div>
+                            <div class="col-xs-12 col-md-12 col-sm-12 table-responsive">
+                                @Html.Label("Descrição")
+                                <br />
+                                <label style="color:blue" class="lbl-fieldset" id="lblDescricao"></label>
+                            </div>
+                            <div class="col-xs-12 col-md-6 col-sm-6">
+                                @Html.Label("Linguagem")
+                                <br />
+                                <label style="color:blue" class="lbl-fieldset" id="lblLinguagem"></label>
+                            </div>
+
+                            <div class="col-xs-12 col-md-6 col-sm-6">
+                                @Html.Label("Atualização")
+                                <br />
+                                <label style="color:blue" class="lbl-fieldset" id="lblData"></label>
+                            </div>                            
+                        </fieldset>
+
+                        <br />
+                        <br />
+
+                        <h4 class="col-xs-12">Contribuições</h4>
+                        <div class="table-responsive col-xs-12">
+                            <table class="table table-striped table-bordered dt-responsive" cellspacing="0" width="100%" id="datatable-contribuicoes">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Nome</th>
+                                        <th class="text-center">Contribuições</th>
+                                        <th class="text-center">Url</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+
+                        <br />
+                        <br />
+                    </div>
+                </div> <!-- fim Body -->
+
+                <div class="modal-footer">
+                    <!-- Footer -->
+                    <button type="button" class="btn btn-success glyphicon glyphicon-floppy-disk" data-dissmiss="modal" id="btnModalSalvar"> Marcar</button>
+                    <button type="button" class="btn btn-info glyphicon glyphicon-remove" data-dissmiss="modal" id="btnModalFechar"> Fechar</button>
+                </div> <!-- fim Footer -->
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,7 @@
+C:\Users\Tiago\teste-desenvolvimento\teste-desenvolvimento\teste-desenvolvimento\teste-desenvolvimento-2\bin\Debug\teste-desenvolvimento-2.exe.config
+C:\Users\Tiago\teste-desenvolvimento\teste-desenvolvimento\teste-desenvolvimento\teste-desenvolvimento-2\bin\Debug\teste-desenvolvimento-2.exe
+C:\Users\Tiago\teste-desenvolvimento\teste-desenvolvimento\teste-desenvolvimento\teste-desenvolvimento-2\bin\Debug\teste-desenvolvimento-2.pdb
+C:\Users\Tiago\teste-desenvolvimento\teste-desenvolvimento\teste-desenvolvimento\teste-desenvolvimento-2\obj\Debug\teste-desenvolvimento-2.csprojAssemblyReference.cache
+C:\Users\Tiago\teste-desenvolvimento\teste-desenvolvimento\teste-desenvolvimento\teste-desenvolvimento-2\obj\Debug\teste-desenvolvimento-2.csproj.CoreCompileInputs.cache
+C:\Users\Tiago\teste-desenvolvimento\teste-desenvolvimento\teste-desenvolvimento\teste-desenvolvimento-2\obj\Debug\teste-desenvolvimento-2.exe
+C:\Users\Tiago\teste-desenvolvimento\teste-desenvolvimento\teste-desenvolvimento\teste-desenvolvimento-2\obj\Debug\teste-desenvolvimento-2.pdb

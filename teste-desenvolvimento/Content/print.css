@@ -1,0 +1,83 @@
+﻿@media print {
+             
+            body {
+		        margin: 100px 40px 10px 70px;
+	        }
+            p {
+		        margin: 5px 50px 5px 50px;
+	        }
+            @page {
+               size: 8.5in 11in;
+               margin: 2cm
+            }
+          
+            .wrap { 
+                visibility: visible;
+                width: 100px; 
+                float: none !important; 
+            }
+            .no-print, nav, footer, video, audio, object, embed { 
+                display:none; 
+            }
+
+            .print {
+                display: block;
+            }
+            img {
+                max-width: 100%;
+            }
+          
+            .print-content .header.print:after {
+                content: "Relatório dos Alunos cadastro nas devidas competições";
+            }
+
+            .print-content th {
+                background-color: #4CAF50;
+                color: white;
+            }
+    
+           .print-content * {
+                visibility: hidden;
+                width: 100%;
+                margin-bottom: 0.5cm;                
+                font: 8pt Georgia, "Times New Roman", Times, serif;
+                page-break-before: always;                              
+               
+            }
+           
+
+            .print-content .page-break * {
+                page-break-before: always; 
+            }
+
+            .print-content .ng-table-filters {
+                display: none;
+            }
+
+            .print-content button {
+                visibility: hidden;
+            }
+
+            .print-content button > span {
+                visibility: hidden;
+            }            
+            
+            .print-content table * {
+                overflow-x:auto;
+                align-items:center;
+                visibility: visible;
+                               
+            }
+            .print-content th, td {
+                border-bottom: 1px solid #ddd;
+            }
+            .print-content table-box * {
+                visibility: visible;
+            }
+            .print-content table-bordered {
+                visibility:visible;
+            }
+            
+                        
+                                   
+        }  
