@@ -18,7 +18,7 @@ namespace aplicacao
         public string Contribuidor { get; set; }
 		
 		public Repositorio(){
-			Proprietario = new Proprietario()
+            Proprietario = new Proprietario();
 		}
     }
 }

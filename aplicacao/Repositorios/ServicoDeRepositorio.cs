@@ -21,30 +21,32 @@ namespace aplicacao.Repositorios
             var request = new HttpRequestMessage(HttpMethod.Get, $"{BaseUrl}/search/repositories?q=name:{nome.Trim()}+page=1&per_page=30&size:<=800&stars:500&is:public&status:success");
             request.Headers.Add("Accept", "application/vnd.github.v3+json");            
             var repositorio = ApiRespostaRequisicao(request);
-            foreach (var repo in repositorio)
+            foreach (var repo in repositorio.Where(r=>r.Description != null && !r.Description.ToUpper().Contains("<!doctype".ToUpper()) && (r.Language != null && r.Language != "")))
             {
-                listaRepositorios.Add(new FormularioDeRepositorios()
-                {
-                    ID = repo.ID,
-                    Name = repo.Name,
-                    Description = repo.Description,
-                    Language = repo.Language,
-                    Updated_at = repo.Updated_at,
-                    Html_url = repo.Html_url,
-                    Login = repo.Proprietario.login,
-                    Contribuidor = repo.Contribuidor,
-                });
-            }
+
+                    listaRepositorios.Add(new FormularioDeRepositorios()
+                    {
+                        ID = repo.ID,
+                        Name = repo.Name,
+                        Description = repo.Description,
+                        Language = repo.Language,
+                        Updated_at = repo.Updated_at,
+                        Html_url = repo.Html_url,
+                        Login = repo.Proprietario.login,
+                        Contribuidor = repo.Contribuidor,
+                    });
+                }
+                          
             return listaRepositorios;
         }
 
         public IEnumerable<FormularioDeRepositorios> ListarTodosRepositorios()
         {
             var listaRepositorios = new List<FormularioDeRepositorios>();          
-            var request = new HttpRequestMessage(HttpMethod.Get, $"{BaseUrl}/search/repositories?q=page=1&per_page=50&size:<=1000&stars:500&is:public&status:success");
+            var request = new HttpRequestMessage(HttpMethod.Get, $"{BaseUrl}/search/repositories?q=page=1&per_page=100&size:<=1000&stars:500&is:public&status:success");
             request.Headers.Add("Accept", "application/vnd.github.v3+json");            
             var repositorio = ApiRespostaRequisicao(request);
-            foreach (var repo in repositorio)
+            foreach (var repo in repositorio.Where(r => r.Description != null && !r.Description.ToUpper().Contains("<!doctype".ToUpper()) && (r.Language != null && r.Language != "")))
             {
                 listaRepositorios.Add(new FormularioDeRepositorios()
                 {
